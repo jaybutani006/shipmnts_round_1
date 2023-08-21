@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
+    const location = useLocation();
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
       <a class="navbar-brand" href="#">
         Weather
       </a>
@@ -20,20 +23,30 @@ function Header() {
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">
-              Home <span class="sr-only">(current)</span>
-            </a>
+          <li
+            className={`nav-item ${location.pathname === "/" ? "active" : ""}`}
+          >
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </li>
-          <li class={`nav-item`}>
-            <a class="nav-link" href="/forecast">
-              Forecast <span class="sr-only">(current)</span>
-            </a>
+          <li
+            className={`nav-item ${
+              location.pathname === "/forecast" ? "active" : ""
+            }`}
+          >
+            <Link className="nav-link" to="/forecast">
+              Forecast
+            </Link>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/current">
-              Current Location <span class="sr-only">(current)</span>
-            </a>
+          <li
+            className={`nav-item ${
+              location.pathname === "/current" ? "active" : ""
+            }`}
+          >
+            <Link className="nav-link" to="/current">
+              Current Location
+            </Link>
           </li>
           {/* <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
