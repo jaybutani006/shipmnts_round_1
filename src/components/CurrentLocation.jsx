@@ -47,12 +47,26 @@ function CurrentLocation() {
     <>
       <div className="container">
         <div className="text-center">
-          <h1>Current Location with Weather Detail</h1> 
+          <h1>Current Location with Weather Detail</h1>
         </div>
         <div>
           {data && (
-            <div>
-              <div className="city_name">
+            <div
+              style={{
+                backgroundColor: "rgba(240, 248, 255, 0.5)",
+                padding: "10px",
+                marginTop: "50px",
+                borderRadius: "20px",
+              }}
+            >
+              <div
+                className="city_name"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
                 <h2>Country : {searchLocation.country}</h2>
                 <h2>State : {searchLocation.region}</h2>
                 <h2>City : {searchLocation.name}</h2>
@@ -72,6 +86,7 @@ function CurrentLocation() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    backgroundColor: "rgba(240, 248, 255, 0.5)",
                   }}
                 >
                   <option value="Celsius" selected>

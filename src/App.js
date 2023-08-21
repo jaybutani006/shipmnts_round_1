@@ -7,7 +7,17 @@ import Forecast from './components/Forecast';
 import CurrentLocation from "./components/CurrentLocation";
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundImage:
+          "url('https://www.survivingwithandroid.com/wp-content/uploads/2014/11/android_weather_app.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -50,25 +50,57 @@ function HomePage() {
             <button onClick={handleSearch}>search</button>
           </div>
           {data && (
-            <div>
-              <div className="city_name">
+            <div
+              style={{
+                backgroundColor: "rgba(240, 248, 255, 0.5)",
+                padding: "10px",
+                marginTop: "50px",
+                borderRadius: "20px",
+              }}
+            >
+              <div
+                className="city_name"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
                 <h2>Country : {searchLocation.country}</h2>
                 <h2>State : {searchLocation.region}</h2>
                 <h2>City : {searchLocation.name}</h2>
               </div>
-              <div className="toggle_deg" style={{width: "100%"}}>
+              <div className="toggle_deg" style={{ width: "100%" }}>
                 {/* <h4>Current Temperature : <span className="description">44deg</span></h4> */}
                 <select
                   name=""
                   id=""
                   value={temp}
                   onChange={(e) => setTemp(e.target.value)}
-                  style={{marginTop : "10px", marginBottom: "10px", width: "100%", height: "40px", display: "flex", justifyContent:"center", alignItems: "center"}}
+                  style={{
+                    marginTop: "10px",
+                    marginBottom: "10px",
+                    width: "100%",
+                    height: "40px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "rgba(240, 248, 255, 0.5)",
+                  }}
                 >
-                  <option value="Celsius" selected>
+                  <option
+                    value="Celsius"
+                    style={{ backgroundColor: "rgba(240, 248, 255, 0.5)" }}
+                    selected
+                  >
                     Celsius
                   </option>
-                  <option value="Fahrenheit">Fahrenheit</option>
+                  <option
+                    style={{ backgroundColor: "rgba(240, 248, 255, 0.5)" }}
+                    value="Fahrenheit"
+                  >
+                    Fahrenheit
+                  </option>
                 </select>
               </div>
               <div className="temp_details" style={{}}>

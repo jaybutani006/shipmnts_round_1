@@ -45,7 +45,7 @@ function Forecast() {
         </div>
         {data && (
           <div className="forecast">
-            <div className="days">
+            <div className="days" style={{marginLeft: "50px"}}>
               <div className="temp_details">
                 <h3 style={{ marginBottom: "5px", marginTop: "0px" }}>
                   {data?.[0]?.date}
