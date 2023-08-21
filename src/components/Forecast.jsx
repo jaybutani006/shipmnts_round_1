@@ -30,7 +30,7 @@ function Forecast() {
       <>
         <div>
           <div className="text-center">
-            <h1>Wheather Forecasting</h1>
+            <h1>Weather Forecasting</h1>
           </div>
           <div className="input_field">
             <input

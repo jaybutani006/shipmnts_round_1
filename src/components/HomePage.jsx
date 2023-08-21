@@ -40,7 +40,7 @@ function HomePage() {
       <div className="container">
         <div>
           <div className="text-center">
-            <h1>Wheather Application</h1>
+            <h1>Weather Application</h1>
           </div>
           <div className="input_field">
             <input
