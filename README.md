@@ -7,15 +7,18 @@ localhost screen shots:
 
 weather by city name
 
-<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/e5278af3-52d9-4ec1-b8da-48da4d72a6f4">
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/e94bdbe7-9c8e-4a54-8477-d00580d47d69">
+
 
 weather forecast by city name
 
-<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/a7ab65b8-7836-4dd5-b998-1a3b72f3874c">
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/72e890bc-b350-43e3-a464-31329d206f95">
+
 
 current location weather
 
-<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/339336fe-555b-4152-90c8-288877275fb2">
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/64ca74ef-4aef-4ad5-8e96-80aaa0e8587e">
+
 
 
 
