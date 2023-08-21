@@ -23,7 +23,7 @@ function Forecast() {
             setData(responseData?.data?.forecast?.forecastday);
         }
     } catch (error) {
-      alert("Network Error");
+      alert("Please Enter the correct city name");
     }
   };
     return (

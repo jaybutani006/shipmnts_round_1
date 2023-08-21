@@ -1,58 +1,55 @@
-import axios from 'axios';
-import React, { useState } from 'react'
-// import "/Homepage.css"
-function HomePage() {
-  const [city, setCity] = useState("");
-  const [temp, setTemp] = useState("Celsius");
-  const [data, setData] = useState();
-  const [searchLocation, setSearchLocation] = useState();
-    const handleSearch = async () => {
-        try {
-            const responseData = await axios.get(
-              `http://api.weatherapi.com/v1/current.json`,
-              {
-                params: {
-                  key: "09b724366bd749c2be254806232108",
-                  q: city, // Set the city parameter
-                },
-              }
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+function CurrentLocation() {
+  useEffect(() => {
+    // Fetch weather data for the user's geolocation on component mount
+    fetchWeatherDataForGeolocation();
+  }, []);
+
+
+    const [data, setData] = useState(null);
+    const [temp, setTemp] = useState("Celsius");
+    const [searchLocation, setSearchLocation] = useState("");
+    
+
+  const fetchWeatherDataForGeolocation = async () => {
+    try {
+      // Get user's geolocation
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        // Fetch weather data using geolocation
+        const response = await axios.get(
+          `http://api.weatherapi.com/v1/current.json`,
+          {
+            params: {
+              key: "09b724366bd749c2be254806232108", // Replace with your actual API key
+              q: `${latitude},${longitude}`, // Use geolocation coordinates
+            },
+          }
           );
-          if (responseData.error) {
-            alert("Please Enter the correct city name");
+          if (response) {
+              setData(response.data.current); // Update the state with API response data
+              setSearchLocation(response.data.location); // Update the state with API response data
           }
           else {
-            console.log(responseData.data);
-            setData(responseData.data.current);
-            setSearchLocation(responseData.data.location);
+              alert("can not featch your location please approve your location to app");
           }
+      });
     } catch (error) {
-      alert("Please Enter Correct city name");
-        }
+      alert("Network Error");
     }
-  return (
-    // <div>
-    //   <p>Current Weather</p>
-    //       <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
-    //       <p onClick={handleSearch} style={{cursor: "pointer"}}>Search</p>
+  };
 
-    // </div>
+  return (
     <>
       <div className="container">
+        <div className="text-center">
+          <h1>Current Location with Weather Detail</h1> 
+        </div>
         <div>
-          <div className="text-center">
-            <h1>Wheather Application</h1>
-          </div>
-          <div className="input_field">
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Search City"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-            <button onClick={handleSearch}>search</button>
-          </div>
           {data && (
             <div>
               <div className="city_name">
@@ -60,14 +57,22 @@ function HomePage() {
                 <h2>State : {searchLocation.region}</h2>
                 <h2>City : {searchLocation.name}</h2>
               </div>
-              <div className="toggle_deg" style={{width: "100%"}}>
+              <div className="toggle_deg" style={{ width: "100%" }}>
                 {/* <h4>Current Temperature : <span className="description">44deg</span></h4> */}
                 <select
                   name=""
                   id=""
                   value={temp}
                   onChange={(e) => setTemp(e.target.value)}
-                  style={{marginTop : "10px", marginBottom: "10px", width: "100%", height: "40px", display: "flex", justifyContent:"center", alignItems: "center"}}
+                  style={{
+                    marginTop: "10px",
+                    marginBottom: "10px",
+                    width: "100%",
+                    height: "40px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   <option value="Celsius" selected>
                     Celsius
@@ -178,4 +183,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default CurrentLocation;

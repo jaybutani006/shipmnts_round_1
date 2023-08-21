@@ -25,9 +25,14 @@ function Header() {
               Home <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class={`nav-item`}>
             <a class="nav-link" href="/forecast">
               Forecast <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/current">
+              Current Location <span class="sr-only">(current)</span>
             </a>
           </li>
           {/* <li class="nav-item">

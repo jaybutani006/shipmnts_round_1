@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/HomePage';
 import Forecast from './components/Forecast';
+import CurrentLocation from "./components/CurrentLocation";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/forecast" element={<Forecast />} />
+        <Route path="/current" element={<CurrentLocation />} />
         {/* <Home /> */}
 
         {/* <Forecast /> */}
