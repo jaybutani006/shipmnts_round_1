@@ -9,7 +9,7 @@ function HomePage() {
     const handleSearch = async () => {
         try {
             const responseData = await axios.get(
-              `http://api.weatherapi.com/v1/current.json`,
+              `https://api.weatherapi.com/v1/current.json`,
               {
                 params: {
                   key: "09b724366bd749c2be254806232108",

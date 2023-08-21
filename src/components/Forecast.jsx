@@ -8,7 +8,7 @@ function Forecast() {
   const handleSearch = async () => {
     try {
       const responseData = await axios.get(
-        `http://api.weatherapi.com/v1/forecast.json`,
+        `https://api.weatherapi.com/v1/forecast.json`,
         {
           params: {
             key: "09b724366bd749c2be254806232108",
