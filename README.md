@@ -1,6 +1,23 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+project Link : https://wheather-app-ten.vercel.app/
+
+localhost screen shots: 
+
+weather by city name
+
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/e5278af3-52d9-4ec1-b8da-48da4d72a6f4">
+
+weather forecast by city name
+
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/a7ab65b8-7836-4dd5-b998-1a3b72f3874c">
+
+current location weather
+
+<img width="960" alt="image" src="https://github.com/jaybutani006/shipmnts_round_1/assets/107234388/339336fe-555b-4152-90c8-288877275fb2">
+
+
 
 ## Available Scripts
 
