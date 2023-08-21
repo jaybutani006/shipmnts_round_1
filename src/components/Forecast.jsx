@@ -18,10 +18,9 @@ function Forecast() {
         }
         );
         // if(responseData.)
-        if (responseData) {
             console.log(responseData.data);
             setData(responseData?.data?.forecast?.forecastday);
-        }
+        
     } catch (error) {
       alert("Please Enter the correct city name");
     }

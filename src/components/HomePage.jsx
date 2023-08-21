@@ -17,14 +17,10 @@ function HomePage() {
                 },
               }
           );
-          if (responseData) {
             console.log(responseData.data);
             setData(responseData.data.current);
             setSearchLocation(responseData.data.location);
-          }
-          else {
-            alert("Please Enter the correct city name");
-          }
+          
     } catch (error) {
       alert("Please Enter Correct city name");
         }
